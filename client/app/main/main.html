@@ -1,8 +1,31 @@
 <header class="hero-unit" id="banner">
   <div class="container">
     <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+    <p class="lead">Skeptic Indian Scaffolding</p>
     <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+  </div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1185373134840049',
+        xfbml      : true,
+        version    : 'v2.6'
+      });
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div
+    class="fb-like"
+    data-share="true"
+    data-width="450"
+    data-show-faces="true">
   </div>
 </header>
 
@@ -17,7 +40,7 @@
   </div>
 
   <form class="thing-form">
-    <label>Syncs in realtime across clients</label>
+    <label>Checking if data Syncs</label>
     <p class="input-group">
       <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="$ctrl.newThing">
       <span class="input-group-btn">
