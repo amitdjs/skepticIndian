@@ -5,6 +5,9 @@ import passport from 'passport';
 import config from '../config/environment';
 import User from '../api/user/user.model';
 
+debugger;
+console.log(config);
+
 // Passport Configuration
 require('./local/passport').setup(User, config);
 require('./facebook/passport').setup(User, config);
