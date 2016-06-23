@@ -12,7 +12,7 @@ export function setup(User, config) {
     ]
   },
   function(accessToken, refreshToken, profile, done) {
-    console.log(profile)
+    console.log(profile);
     User.findOne({'facebook.id': profile.id}).exec()
       .then(user => {
         if (user) {

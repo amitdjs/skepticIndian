@@ -17,7 +17,13 @@ class MainController {
   $onInit() {
     this.$http.get('/api/things').then(response => {
       this.awesomeThings = response.data;
+      var num = 0;
+      _.each(this.awesomeThings, function(t) {
+        t.even = num%2;
+        num++;
+      });
       this.socket.syncUpdates('thing', this.awesomeThings);
+      console.log(this.awesomeThings);
     });
   }
 
