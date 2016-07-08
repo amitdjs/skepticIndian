@@ -12,12 +12,13 @@ export function setup(User, config) {
     ]
   },
   function(accessToken, refreshToken, profile, done) {
+    console.log(profile);
     User.findOne({'facebook.id': profile.id}).exec()
       .then(user => {
         if (user) {
           return done(null, user);
         }
-
+      debugger;
         user = new User({
           name: profile.displayName,
           email: profile.emails[0].value,
