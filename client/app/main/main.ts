@@ -5,5 +5,8 @@ angular.module('skepticApp')
     $routeProvider
       .when('/', {
         template: '<main></main>'
-      });
+      })
+        .when('/poll', {
+          template: '<poll></poll>'
+        });
   });
